@@ -1,0 +1,73 @@
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.animate-ripple {
+    animation: ripple 0.6s ease-out;
+}
+
+@keyframes wave {
+    0%, 100% { 
+        transform: rotate(0deg); 
+    }
+    25% { 
+        transform: rotate(20deg); 
+    }
+    75% { 
+        transform: rotate(-20deg); 
+    }
+}
+
+.animate-wave {
+    animation: wave 1.5s ease-in-out infinite;
+    transform-origin: 70% 70%;
+}
+
+/* Mejora del shimmer */
+@keyframes shimmer {
+    0% { 
+        transform: translateX(-100%); 
+    }
+    100% { 
+        transform: translateX(100%); 
+    }
+}
+
+.animate-shimmer {
+    animation: shimmer 2s infinite;
+}
+
+/* Bounce mejorado */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Scale hover */
+.hover\:scale-105:hover {
+    transform: scale(1.05);
+}
+
+.hover\:scale-110:hover {
+    transform: scale(1.1);
+}
+
+/* Transition groups */
+.transition-transform {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-colors {
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}

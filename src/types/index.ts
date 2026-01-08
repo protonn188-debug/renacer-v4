@@ -71,3 +71,54 @@ export interface Notification {
     message: string;
     type: NotificationType;
 }
+
+// Agregar al archivo types/index.ts
+export interface AnalyticsData {
+  reading: {
+    totalPages: number;
+    avgPagesPerDay: number;
+    totalBooks: number;
+    currentStreak: number;
+    maxStreak: number;
+    readingSpeed: number;
+    pagesPerWeek: number[];
+    favoriteTime: string;
+    completionRate: number;
+  };
+  habits: {
+    totalCompleted: number;
+    completionRate: number;
+    bestHabit: string;
+    worstHabit: string;
+    streak: number;
+    consistency: number;
+    dailyAverage: number;
+  };
+  cognitive: {
+    totalSessions: number;
+    totalPoints: number;
+    avgScore: number;
+    bestCategory: string;
+    improvement: number;
+    lastScore: number;
+  };
+  productivity: {
+    totalStudyHours: number;
+    avgSessionDuration: number;
+    mostProductiveTime: string;
+    activitiesCompleted: number;
+    efficiency: number;
+    focusTime: number;
+    score: number;
+  };
+  timeRange: 'week' | 'month' | 'year' | 'all';
+}
+
+export interface DailyData {
+  date: string;
+  day: string;
+  pages: number;
+  habits: number;
+  hours: number;
+  score: number;
+}
